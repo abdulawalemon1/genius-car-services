@@ -4,13 +4,13 @@ const Service = ({ service }) => {
     const { name, img, description, price } = service;
 
     return (
-        <div className='service'>
+        <div className='service '>
 
             <img src={img} alt="" />
             <h3>{name}</h3>
             <p>Price: {price}</p>
             <p><small>{description}</small></p>
-            <button>Book:{name}</button>
+            <button className='btn btn-outline-primary'>Book Now</button>
         </div>
     );
 };
