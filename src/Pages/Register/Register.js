@@ -37,9 +37,13 @@ const Register = () => {
 
                 <input required type="password" name="password" id="" placeholder='Your password' />
 
-                <input className='btn btn-primary' type="submit" value="Register" />
+                <input type="checkbox" name="terms" id="terms" />
+
+                <label htmlFor="terms">Accept terms & conditions</label>
+                <input className='w-50 mx-auto btn btn-primary mt-2' type="submit" value="Register" />
+
             </form>
-            <p>Already have an account ?<Link to={'/login'} onClick={navigateLogin} className='text-danger pe-auto text-decoration-none'>Please Login</Link></p>
+            <p>Already have an account ?<Link to={'/login'} onClick={navigateLogin} className='text-primary pe-auto text-decoration-none'>Please Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );
