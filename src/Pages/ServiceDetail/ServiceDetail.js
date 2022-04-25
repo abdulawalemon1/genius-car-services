@@ -15,7 +15,7 @@ const ServiceDetail = () => {
         <div className='text-center'>
             <h2>You are about to book : {service.name}</h2>
             <div>
-                <Link to="/checkout">
+                <Link to={`/checkout/${serviceId}`}>
                     <button className='btn btn-primary'>Proceed Checkout</button>
                 </Link>
             </div>
