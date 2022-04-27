@@ -19,7 +19,7 @@ const CheckOut = () => {
             phone: event.target.phone.value,
             address: event.target.address.value,
         }
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://gentle-tor-39421.herokuapp.com/order', order)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

@@ -12,8 +12,8 @@ const Order = () => {
 
     useEffect(() => {
         const getOrders = async () => {
-            const email = user.email;
-            const url = `http://localhost:5000/order?email=${email}`;
+            const email = user?.email;
+            const url = `https://gentle-tor-39421.herokuapp.com/order?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -35,7 +35,7 @@ const Order = () => {
 
     // useEffect(() => {
     //     const email = user.email;
-    //     const url = `http://localhost:5000/order?email=${email}`;
+    //     const url = `https://gentle-tor-39421.herokuapp.com/order?email=${email}`;
     //     fetch(url)
     //         .then(res => res.json())
     //         .then(data => setOrders(data))

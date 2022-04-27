@@ -4,6 +4,7 @@ import './Register.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import useToken from '../../Hooks/useToken';
 
 const Register = () => {
     const [
@@ -13,10 +14,13 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    const [token] = useToken(user);
+
+
     const navigateLogin = e => {
         navigate('/login');
     }
-    if (user) {
+    if (token) {
         navigate('/home')
     }
     const handleRegister = e => {
